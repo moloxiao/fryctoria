@@ -1,0 +1,16 @@
+# ignore packages installed by npm
+node_modules
+
+# ignore private config
+private_config
+
+# ignore webstrom config
+.idea
+.bak
+
+# ignore tar file
+.tar.gz
+
+*~
+
+.DS_Store
