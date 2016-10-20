@@ -3,6 +3,16 @@
  * 邮件发送服务
  *
  */
+var env = process.env.NODE_ENV || "development";
+var flag = false;
+switch(env){
+    case "production":
+        flag = true;
+        break;
+    case "development":
+        flag = false;
+        break;
+}
 
 var netease_impl = require('./impl/netease_impl.js');
 
@@ -21,7 +31,12 @@ exports.initConfig = function(config) {
  * @return  {Void}
  */
 function sendMail(title, msg, fromwho, addresses_array, callback){
-   netease_impl.sendMail(title, msg, fromwho, addresses_array, callback);
+	if(flag){
+		netease_impl.sendMail(title, msg, fromwho, addresses_array, callback);
+	}
+	else{
+		return;
+	}
 }
 
 exports.sendMail = sendMail;
