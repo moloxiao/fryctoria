@@ -20,6 +20,10 @@ exports.initConfig = function(config) {
   netease_impl.initConfig(config);
 }
 
+exports.setSendSwitch = function(value) {
+    
+    flag = value;
+}
 /**
  * 发送1封邮件给N个人(目前不支持CC)
  *
