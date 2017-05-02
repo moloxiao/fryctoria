@@ -1,6 +1,9 @@
 # ignore packages installed by npm
 node_modules
 
+# ignore demo file
+demo
+
 # ignore private config
 private_config
 
