@@ -9,6 +9,12 @@ switch(env){
     case "production":
         flag = true;
         break;
+    case "euproduction":
+        flag = true;
+        break;
+    case "naproduct":
+        flag = true;
+        break;
     case "development":
         flag = false;
         break;
